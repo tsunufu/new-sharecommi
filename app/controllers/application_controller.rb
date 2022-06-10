@@ -3,13 +3,13 @@ class ApplicationController < ActionController::Base
 
     def login?
         if current_user.nil?
-            redirect_to login_path, alert: "you have to login"
+            redirect_to login_path
         end
     end
 
     def already_login?
         unless current_user.nil?
-            redirect_to user_path, notice: "you are already login"
+            redirect_to root_path
         end
     end
 

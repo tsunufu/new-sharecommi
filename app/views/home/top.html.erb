@@ -1,4 +1,24 @@
-<h1>Hello</h1>
+<body class="main">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/assets/img/hero.png" class="d-block mx-lg-auto img-fluid" alt="メイン画像" width="700" height="450" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">SHARE COMMI</h1>
+        <h3>全く新しいクチコミ投稿SNS</h3>
+        <p class="lead">従来の匿名のクチコミアプリとは違い，身近な人の口コミが見れるサービス<br>
+          友達におすすめされたお店ならとりあえず行ってみようって気になりませんか？<br>
+          もう大量のクチコミを見て悩む時代は終わりにしよう。</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <% unless !current_user.nil? %>
+            <%= link_to "新規登録", new_user_path, class: "btn btn-secondary btn-lg px-4 me-md-2" %>
+            <%= link_to "ログイン", login_path, class: "btn btn-secondary btn-lg px-4 me-md-2" %>
+          <% else %>
+            <p>you are login as "<strong><%= current_user.email %></strong>"</p><!--ログイン確認用->
+          <% end %>
+        </div>
 
-<%= link_to "Sign up", new_user_path %>
-<%= link_to "Log in", login_path %>
+</body>
+
+
