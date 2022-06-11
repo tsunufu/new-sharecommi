@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  shopname: MyString
+  user: one
+  title: MyString
   img: MyString
   category: MyString
   assessment: 1
   comment: MyText
-  shopurl: MyString
-  user_id: MyString
+  url: MyString
 
 two:
-  shopname: MyString
+  user: two
+  title: MyString
   img: MyString
   category: MyString
   assessment: 1
   comment: MyText
-  shopurl: MyString
-  user_id: MyString
+  url: MyString

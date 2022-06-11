@@ -1,13 +1,13 @@
 class CreatePosts < ActiveRecord::Migration[5.1]
   def change
     create_table :posts do |t|
-      t.string :shopname
+      t.references :user, foreign_key: true
+      t.string :title
       t.string :img
       t.string :category
       t.integer :assessment
       t.text :comment
-      t.string :shopurl
-      t.string :user_id
+      t.string :url
 
       t.timestamps
     end
