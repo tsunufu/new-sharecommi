@@ -1,26 +1,26 @@
 <%= form_with model: @post, local: true do |form| %>
 
 <p><%= form.label :title %><br>
-<%= form.text_field :title %> #titleの入力フォーム生成
+<%= form.text_field :title %>
 </p>
 
 <p><%= form.label :img %><br>
-<%= form.text_area :img %> #bodyの入力フォーム生成
+<%= form.text_area :img %>
 </p>
 
 <p><%= form.label :assessment %><br>
-<%= form.text_field :assessment %> #titleの入力フォーム生成
+<%= form.text_field :assessment %>
 </p>
 
 <p><%= form.label :comment %><br>
-<%= form.text_area :comment %> #bodyの入力フォーム生成
+<%= form.text_area :comment %>
 </p>
 
 <p><%= form.label :url %><br>
-<%= form.text_field :url %> #titleの入力フォーム生成
+<%= form.text_field :url %>
 </p>
 
-<p><%= form.submit %> #送信ボタンを生成
+<p><%= form.submit %>
 </p>
 
 <% end %>

@@ -17,6 +17,10 @@
           <% else %>
             <p>you are login as "<strong><%= current_user.email %></strong>"</p><!--ログイン確認用->
           <% end %>
+          
+          <% if logged_in? && @user == current_user %>
+            <%= link_to "退会",user_path(current_user.id), class: "destroy-user", method: :delete, "data-confirm" => "本当に退会しますか？" %>
+          <% end %>
         </div>
 
 </body>
