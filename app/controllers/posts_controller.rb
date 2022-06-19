@@ -9,11 +9,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(
-      title: params[:title],
-      #今回追加する操作
-      user_id: current_user.id
-      )
+    @post = Post.new(post_params)
     if @post.save
      redirect_to root_path
     else
@@ -22,8 +18,9 @@ class PostsController < ApplicationController
   end
 
 
-  private
-  def post_params
-   params.require(:post).permit(:title)
-  end
+    private
+      def post_params
+       params.require(:post).permit(
+           :title, :img, :category, :assessment, :comment, :url).merge(user_id: current_user.id)
+      end
 end

@@ -1,6 +1,18 @@
 <h1>投稿一覧</h1>
 
 <% @posts.each do |post| %>
-  <%= post.title %>
-  <%= post.user_id %>
+  <h2>投稿</h2>
+  <%= post.title %><br>
+  <p>投稿者</p>
+  <%= post.user_id %><br>
+  <p>画像</p>
+  <%= post.img %><br>
+  <p>カテゴリー</p>
+  <%= post.category %><br>
+  <p>評価</p>
+  <%= post.assessment %><br>
+  <p>コメント</p>
+  <%= post.comment %><br>
+  <p>URL</p>
+  <%= post.url %><br>
 <% end %>
